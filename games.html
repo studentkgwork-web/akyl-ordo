@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интеллектуалдык Оюндар | Акыл Ордо</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">💡</span>
+                <span class="logo-text">АКЫЛ<span>ОРДО</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-item">Башкы бет</a>
+                <a href="alphabet.html" class="nav-item">Алфавит</a>
+                <a href="games.html" class="nav-item active">Интеллект Оюндар</a>
+                <a href="news.html" class="nav-item">Жаңылыктар</a>
+                <a href="library.html" class="nav-item">Китепкана</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎮 Интеллектуалдык Оюндар & Өзүн-өзү Текшерүү</h2>
+                <p>Билимиңизди сынап, мээңизди машыктырыңыз</p>
+            </div>
+
+            <div class="games-grid" style="margin-top: 40px;">
+                <!-- 1-Оюн: Размытый суроолор -->
+                <div class="game-card" style="text-align: left;">
+                    <div class="card-badge">🧠 ӨЗҮН-ӨЗҮ ТЕКШЕРҮҮ</div>
+                    <h3 style="margin: 15px 0;">Логикалык суроо-жооптор</h3>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px;">Суроону окуп, жообун алгач ойлонуп, андан кийин ачып текшериңиз.</p>
+                    
+                    <div class="quiz-answer-blur" id="gameBlurBox" onclick="revealGameAnswer()" style="cursor: pointer;">
+                        <span class="blur-text" id="gameBlurText">Жоопту көрүү үчүн басыңыз: «Дүйнөдөгү эң биринчи университет кайсы өлкөдө ачылган?»</span>
+                    </div>
+                </div>
+
+                <!-- 2-Оюн: Блиц тест -->
+                <div class="game-card" style="text-align: left;">
+                    <div class="card-badge">⏱️ БЛИЦ ВИКТОРИНА</div>
+                    <h3 style="margin: 15px 0;">60 секунддук сыналыш</h3>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px;">Убакыт бүткөнчө көбүрөөк туура жооп берүүгө аракет кылыңыз.</p>
+                    <button class="btn btn-primary" onclick="alert('Баскыч иштеди! Жакында толук оюн модулу кошулат.')">Оюнду баштоо</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function revealGameAnswer() {
+            const box = document.getElementById("gameBlurBox");
+            const text = document.getElementById("gameBlurText");
+            box.classList.toggle("revealed");
+            if(box.classList.contains("revealed")) {
+                text.innerText = "Жооп: Мароккодогу Аль-Каравийин университети (859-ж.)";
+            } else {
+                text.innerText = "Жоопту көрүү үчүн басыңыз: «Дүйнөдөгү эң биринчи университет кайсы өлкөдө ачылган?»";
+            }
+        }
+    </script>
+</body>
+</html>

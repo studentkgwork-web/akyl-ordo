@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акыл Ордо | №1 Интеллектуалдык Платформа Кыргызстан</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">💡</span>
+                <span class="logo-text">АКЫЛ<span>ОРДО</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-item active">Башкы бет</a>
+                <a href="alphabet.html" class="nav-item">Алфавит</a>
+                <a href="games.html" class="nav-item">Интеллект Оюндар</a>
+                <a href="news.html" class="nav-item">Жаңылыктар</a>
+                <a href="library.html" class="nav-item">Китепкана <span class="badge">Soon</span></a>
+            </nav>
+            <div class="header-actions">
+                <a href="admin.html" class="btn btn-secondary" style="text-decoration: none; font-size: 0.9rem;">⚙️ Админ панель</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tag">🚀 Кыргызстандагы №1 Биринчи Интеллектуалдык Портал</span>
+                <h1 class="hero-title">Билимди тереңдет, мээңди машыктыр, чокуга чык!</h1>
+                <p class="hero-description">
+                    Энциклопедиялык алфавит, логикалык оюндар, аудиокитептер жана коомчулук суроолору бир жерде. Тандаган бөлүмүңүзгө өтүп изилдеңиз!
+                </p>
+                <div class="hero-buttons" style="display: flex; gap: 15px; margin-top: 20px;">
+                    <a href="alphabet.html" class="btn btn-primary" style="text-decoration: none;">Алфавитти ачуу →</a>
+                    <a href="games.html" class="btn btn-secondary" style="text-decoration: none;">Оюндарды ойноо 🎮</a>
+                </div>
+            </div>
+            
+            <!-- Күндүн Суроосу Интерактив Карточкасы -->
+            <div class="daily-quiz-card">
+                <div class="card-badge">🔥 КҮНДҮН СУРООСУ</div>
+                <h3 class="quiz-question">Кыргыз жазуусунда эң биринчи басылып чыккан китеп кайсы?</h3>
+                <div class="quiz-answer-blur" id="quizAnswerBlur">
+                    <span class="blur-text">Жоопту көрүү үчүн басыңыз</span>
+                </div>
+                <button class="btn btn-secondary full-width" onclick="revealAnswer()">Жоопту текшерүү</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <main-footer class="main-footer" style="display: block; text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8;">
+        <div class="container">
+            <p>© 2026 Акыл Ордо. Кыргызстандагы №1 Интеллектуалдык Экосистема.</p>
+        </div>
+    </main-footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
