@@ -1,52 +1,5 @@
-<!DOCTYPE html>
-<html lang="ky">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интеллектуалдык Суроолор | Акыл Ордо</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Башкы шапка (Header) -->
-    <header class="main-header">
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">💡</span>
-                <span class="logo-text">АКЫЛ<span>ОРДО</span></span>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-item">Башкы бет</a>
-                <a href="alphabet.html" class="nav-item active">Интеллектуалдык Суроолор</a>
-                <a href="games.html" class="nav-item">Интеллект Оюндар</a>
-                <a href="news.html" class="nav-item">Жаңылыктар</a>
-                <a href="library.html" class="nav-item">Китепкана</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="section-padding">
-        <div class="container">
-            <!-- Бөлүмдүн башы -->
-            <div class="section-header" style="text-align: left; margin-bottom: 25px;">
-                <h2>🧩 Интеллектуалдык Суроолор</h2>
-                <p>Ар кандай деңгээлдеги жана категориядагы логикалык суроолор. Мээңизди машыктырыңыз!</p>
-            </div>
-
-            <!-- Инструменттер тилкеси (Баары, Сорттоо, Категория, Тамгалар, Издөө) -->
-            <div id="alphabetBar" style="margin-bottom: 20px;"></div>
-
-            <!-- Суроолор тизмеги чыгуучу контейнер -->
-            <div id="alphabetDisplay"></div>
-        </div>
-    </section>
-
-    <footer class="main-footer" style="padding: 20px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); color: #64748b; font-size: 0.9rem;">
-        <div class="container">
-            <p>© 2026 Акыл Ордо. Кыргызстандагы №1 Интеллектуалдык Экосистема.</p>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="ky"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Суроолор — Акыл-Ордо</title><link rel="stylesheet" href="style.css"></head><body data-page="alphabet"><div id="appHeader"></div><main class="container page-content">
+  <div class="page-title"><div><div class="eyebrow">БИЛИМ БАЗАСЫ</div><h1>Суроолор жана жооптор</h1><p class="muted">Суроолор баскычтарга жана номерлерге бөлүнгөн. Изде, деңгээлди танда жана өзүңдү текшер.</p></div><span class="pill" id="questionCount">0 суроо</span></div>
+  <section class="toolbar"><input id="questionSearch" type="search" placeholder="Суроону же ачкыч сөздү издөө..."><select id="levelFilter"><option value="">Бардык деңгээлдер</option><option>Оңой</option><option>Орто</option><option>Кыйын</option><option>Эксперт</option></select><select id="categoryFilter"><option value="">Бардык категориялар</option></select><select id="typeFilter"><option value="">Бардык түрлөрү</option><option value="question">Суроо</option><option value="riddle">Табышмак</option><option value="rebus">Ребус</option></select></section>
+  <div id="questionList" class="question-list"></div>
+</main><div id="appFooter"></div><div id="toast" class="toast"></div><script src="app.js"></script></body></html>

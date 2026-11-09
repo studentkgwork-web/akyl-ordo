@@ -1,70 +1,11 @@
-<!DOCTYPE html>
-<html lang="ky">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Акыл Ордо | №1 Интеллектуалдык Платформа Кыргызстан</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Header & Main Navigation -->
-    <header class="main-header">
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">💡</span>
-                <span class="logo-text">АКЫЛ<span>ОРДО</span></span>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-item active">Башкы бет</a>
-                <a href="alphabet.html" class="nav-item">Алфавит</a>
-                <a href="games.html" class="nav-item">Интеллект Оюндар</a>
-                <a href="news.html" class="nav-item">Жаңылыктар</a>
-                <a href="library.html" class="nav-item">Китепкана <span class="badge">Soon</span></a>
-            </nav>
-            <div class="header-actions">
-                <a href="admin.html" class="btn btn-secondary" style="text-decoration: none; font-size: 0.9rem;">⚙️ Админ панель</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="hero-tag">🚀 Кыргызстандагы №1 Биринчи Интеллектуалдык Портал</span>
-                <h1 class="hero-title">Билимди тереңдет, мээңди машыктыр, чокуга чык!</h1>
-                <p class="hero-description">
-                    Энциклопедиялык алфавит, логикалык оюндар, аудиокитептер жана коомчулук суроолору бир жерде. Тандаган бөлүмүңүзгө өтүп изилдеңиз!
-                </p>
-                <div class="hero-buttons" style="display: flex; gap: 15px; margin-top: 20px;">
-                    <a href="alphabet.html" class="btn btn-primary" style="text-decoration: none;">Алфавитти ачуу →</a>
-                    <a href="games.html" class="btn btn-secondary" style="text-decoration: none;">Оюндарды ойноо 🎮</a>
-                </div>
-            </div>
-            
-            <!-- Күндүн Суроосу Интерактив Карточкасы -->
-            <div class="daily-quiz-card">
-                <div class="card-badge">🔥 КҮНДҮН СУРООСУ</div>
-                <h3 class="quiz-question">Кыргыз жазуусунда эң биринчи басылып чыккан китеп кайсы?</h3>
-                <div class="quiz-answer-blur" id="quizAnswerBlur">
-                    <span class="blur-text">Жоопту көрүү үчүн басыңыз</span>
-                </div>
-                <button class="btn btn-secondary full-width" onclick="revealAnswer()">Жоопту текшерүү</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <main-footer class="main-footer" style="display: block; text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8;">
-        <div class="container">
-            <p>© 2026 Акыл Ордо. Кыргызстандагы №1 Интеллектуалдык Экосистема.</p>
-        </div>
-    </main-footer>
-
-    <script src="app.js"></script>
-</body>
-</html>
+<!doctype html>
+<html lang="ky"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Башкы бет — Акыл-Ордо</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="home"><div id="appHeader"></div>
+<main class="container page-content">
+  <section class="hero"><div class="hero-copy"><span class="hero-tag">БИЛИМ · ЛОГИКА · ЫНТЫМАК</span><h1>Билимиңди сына.<br><em>Оюңду өнүктүр.</em></h1><p>Акыл-Ордо — билимди, логиканы жана командалык ынтымакты бириктирген интеллектуалдык аянтча.</p><div class="hero-actions"><a class="btn btn-light" href="games.html">Оюнду баштоо <span>→</span></a><a class="hero-link" href="alphabet.html">Суроолор базасы</a></div></div><div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="brain">А?</div><span class="float-chip chip-one">+10 упай</span><span class="float-chip chip-two">🧠 Логика</span></div></section>
+  <section class="section-head"><div><div class="eyebrow">ПЛАТФОРМА</div><h2>Акыл-Ордонун көрсөткүчтөрү</h2></div><span class="live-dot">Жандуу маалымат</span></section>
+  <div class="stats-grid"><article class="stat-card"><span class="stat-icon blue">❓</span><div><strong id="statQuestions">0</strong><span>Суроолор</span></div></article><article class="stat-card"><span class="stat-icon purple">👥</span><div><strong id="statTeams">0</strong><span>Командалар</span></div></article><article class="stat-card"><span class="stat-icon cyan">🎮</span><div><strong id="statGames">0</strong><span>Өткөрүлгөн оюндар</span></div></article><article class="stat-card"><span class="stat-icon orange">📰</span><div><strong id="statNews">0</strong><span>Жаңылыктар</span></div></article></div>
+  <section class="section-head"><div><div class="eyebrow">МҮМКҮНЧҮЛҮКТӨР</div><h2>Платформа бөлүмдөрү</h2></div></section>
+  <div class="feature-grid"><a class="feature-card" href="alphabet.html"><span class="feature-icon">📚</span><h3>Суроолор базасы</h3><p>Деңгээл жана категория боюнча суроолорду изде.</p><span class="card-arrow">Бөлүмгө өтүү →</span></a><a class="feature-card" href="games.html"><span class="feature-icon">🏆</span><h3>Интеллектуалдык оюн</h3><p>Командаларды түзүп, упайларды эсепте.</p><span class="card-arrow">Бөлүмгө өтүү →</span></a><a class="feature-card" href="library.html"><span class="feature-icon">📖</span><h3>Китепкана</h3><p>Пайдалуу китептер жана окуу материалдары.</p><span class="card-arrow">Бөлүмгө өтүү →</span></a><a class="feature-card" href="news.html"><span class="feature-icon">📢</span><h3>Жаңылыктар</h3><p>Акыркы жарыялар жана иш-чаралар.</p><span class="card-arrow">Бөлүмгө өтүү →</span></a></div>
+  <section class="section-head"><div><div class="eyebrow">АКЫРКЫ ЖАРЫЯЛАР</div><h2>Жаңылыктар</h2></div><a class="text-link" href="news.html">Баарын көрүү →</a></section><div id="homeNews" class="news-grid"></div>
+</main><div id="appFooter"></div><div id="toast" class="toast"></div><script src="app.js"></script></body></html>

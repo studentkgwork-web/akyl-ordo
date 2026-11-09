@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ky">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Кирүү — Акыл-Ордо</title><link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page" data-page="login">
+  <main class="auth-shell">
+    <a class="brand auth-brand" href="login.html"><span class="brand-mark">А</span><span>АКЫЛ-ОРДО<small>Интеллектуалдык платформа</small></span></a>
+    <section class="auth-card">
+      <div class="eyebrow">КОШ КЕЛИҢИЗ</div><h1 id="authTitle">Аккаунтуңузга кириңиз</h1>
+      <p class="muted" id="authSubtitle">Улантуу үчүн электрондук почтаңызды жана сырсөзүңүздү жазыңыз.</p>
+      <form id="authForm">
+        <div id="nameField" class="field hidden"><label for="fullName">Аты-жөнү</label><input id="fullName" autocomplete="name" placeholder="Аты-жөнүңүз"></div>
+        <div id="usernameField" class="field hidden"><label for="username">Колдонуучу аты (@username)</label><input id="username" autocomplete="username" minlength="3" maxlength="20" pattern="[A-Za-z0-9_]{3,20}" placeholder="мисалы: akyl_ordo"><small class="muted">3–20 белги: англис тамгалары, сандар жана _ . Катталгандан кийин өзгөрбөйт.</small></div>
+        <div class="field"><label for="email">Электрондук почта</label><input id="email" type="email" required autocomplete="username" placeholder="example@mail.com"></div>
+        <div class="field"><label for="password">Сырсөз</label><div class="password-wrap"><input id="password" type="password" required minlength="6" autocomplete="current-password" placeholder="Кеминде 6 белги"><button type="button" class="eye-btn" id="togglePassword" aria-label="Сырсөздү көрсөтүү">◉</button></div></div>
+        <div id="confirmField" class="field hidden"><label for="confirmPassword">Сырсөздү кайталаңыз</label><input id="confirmPassword" type="password" minlength="6" placeholder="Сырсөздү кайра жазыңыз"></div>
+        <button class="btn btn-primary btn-wide" id="authSubmit" type="submit">Кирүү</button>
+      </form>
+      <p class="auth-switch"><span id="switchText">Аккаунтуңуз жокпу?</span> <button class="link-btn" id="switchMode" type="button">Катталуу</button></p>
+      <p class="notice">Демо администратор: <b>admin@akylordo.kg</b> · Сырсөз: <b>Ordo2026!</b></p>
+      <p class="tiny muted">Демо версия: маалыматтар ушул браузердин localStorage сактагычында сакталат.</p>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body></html>

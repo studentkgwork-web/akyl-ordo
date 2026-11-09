@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ky">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Менин профилим — Акыл-Ордо</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="profile">
+  <div id="appHeader"></div>
+  <main class="container page-content">
+    <div class="page-title"><div><div class="eyebrow">ЖЕКЕ КАБИНЕТ</div><h1>Менин профилим</h1><p class="muted">Маалыматтарыңызды жана топтогон упайларыңызды башкарыңыз.</p></div><span class="pill">КАТЫШУУЧУ</span></div>
+    <section class="profile-card panel">
+      <div class="profile-avatar" id="profileAvatar">👤</div><div class="profile-main"><h2 id="profileName">Колдонуучу</h2><p class="muted" id="profileUsername">@username</p><p class="muted" id="profileEmail"></p><p id="profileBio" class="profile-bio"></p><span class="tag">Акыл-Ордо катышуучусу</span><div id="profileBadges" class="profile-badges"></div></div>
+      <div class="profile-controls"><label class="btn btn-outline">Сүрөт тандоо<input id="avatarUpload" type="file" accept="image/*" hidden></label><button class="btn btn-outline" id="editProfileBtn" type="button">Профилди өзгөртүү</button></div>
+    </section>
+    <section class="panel hidden" id="profileEditPanel">
+      <div class="panel-head"><div><h2>Профилди редакциялоо</h2><p class="muted">Колдонуучу атыңыз өзгөртүлбөйт.</p></div></div>
+      <form id="profileEditForm" class="admin-form">
+        <label>Аты-жөнү<input id="editFullName" required maxlength="60"></label>
+        <label>Кыскача маалымат<textarea id="editBio" rows="2" maxlength="300" placeholder="Өзүңүз жөнүндө кыскача"></textarea></label>
+        <div class="form-grid"><label>Окуу жайы / факультет<input id="editInstitution" maxlength="100" placeholder="Мисалы: ОшМУ, IT факультети"></label><label>Шаар<input id="editCity" maxlength="60" placeholder="Шаарыңыз"></label></div>
+        <label>Сайт же портфолио шилтемеси<input id="editWebsite" type="url" maxlength="200" placeholder="https://..."></label>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Өзгөртүүлөрдү сактоо</button><button class="btn btn-outline" id="cancelProfileEdit" type="button">Жокко чыгаруу</button></div>
+      </form>
+    </section>
+    <div class="stats-grid profile-stats">
+      <article class="stat-card"><span class="stat-icon blue">⭐</span><div><strong id="profilePoints">0</strong><span>Топтолгон упай</span></div></article>
+      <article class="stat-card"><span class="stat-icon cyan">❓</span><div><strong id="profileAnswered">0</strong><span>Жооп берилген суроо</span></div></article>
+      <article class="stat-card"><span class="stat-icon purple">🏆</span><div><strong id="profileRank">—</strong><span>Жалпы рейтинг</span></div></article>
+      <article class="stat-card"><span class="stat-icon orange">🎯</span><div><strong>+10</strong><span>Упай / туура жооп</span></div></article>
+    </div>
+    <section class="panel"><div class="panel-head"><div><h2>Мен жооп берген суроолор</h2><p class="muted">Ар бир суроого биринчи туура жооп үчүн 10 упай берилет.</p></div><a class="btn btn-primary btn-sm" href="alphabet.html">Суроолорго өтүү</a></div><div id="profileHistory" class="history-list"></div></section>
+    <section class="panel" id="publicLeaderboard"><div class="panel-head"><div><h2>Жалпы рейтинг</h2><p class="muted">Бул рейтинг бардык катышуучуларга көрүнөт.</p></div><a class="text-link" href="rating.html">Толук рейтинг →</a></div><div id="profileLeaderboard" class="leaderboard-list"></div></section>
+  </main>
+  <div id="appFooter"></div><div id="toast" class="toast"></div><script src="app.js"></script>
+</body></html>

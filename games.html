@@ -1,70 +1,20 @@
-<!DOCTYPE html>
-<html lang="ky">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интеллектуалдык Оюндар | Акыл Ордо</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="main-header">
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">💡</span>
-                <span class="logo-text">АКЫЛ<span>ОРДО</span></span>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-item">Башкы бет</a>
-                <a href="alphabet.html" class="nav-item">Алфавит</a>
-                <a href="games.html" class="nav-item active">Интеллект Оюндар</a>
-                <a href="news.html" class="nav-item">Жаңылыктар</a>
-                <a href="library.html" class="nav-item">Китепкана</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>🎮 Интеллектуалдык Оюндар & Өзүн-өзү Текшерүү</h2>
-                <p>Билимиңизди сынап, мээңизди машыктырыңыз</p>
-            </div>
-
-            <div class="games-grid" style="margin-top: 40px;">
-                <!-- 1-Оюн: Размытый суроолор -->
-                <div class="game-card" style="text-align: left;">
-                    <div class="card-badge">🧠 ӨЗҮН-ӨЗҮ ТЕКШЕРҮҮ</div>
-                    <h3 style="margin: 15px 0;">Логикалык суроо-жооптор</h3>
-                    <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px;">Суроону окуп, жообун алгач ойлонуп, андан кийин ачып текшериңиз.</p>
-                    
-                    <div class="quiz-answer-blur" id="gameBlurBox" onclick="revealGameAnswer()" style="cursor: pointer;">
-                        <span class="blur-text" id="gameBlurText">Жоопту көрүү үчүн басыңыз: «Дүйнөдөгү эң биринчи университет кайсы өлкөдө ачылган?»</span>
-                    </div>
-                </div>
-
-                <!-- 2-Оюн: Блиц тест -->
-                <div class="game-card" style="text-align: left;">
-                    <div class="card-badge">⏱️ БЛИЦ ВИКТОРИНА</div>
-                    <h3 style="margin: 15px 0;">60 секунддук сыналыш</h3>
-                    <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px;">Убакыт бүткөнчө көбүрөөк туура жооп берүүгө аракет кылыңыз.</p>
-                    <button class="btn btn-primary" onclick="alert('Баскыч иштеди! Жакында толук оюн модулу кошулат.')">Оюнду баштоо</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        function revealGameAnswer() {
-            const box = document.getElementById("gameBlurBox");
-            const text = document.getElementById("gameBlurText");
-            box.classList.toggle("revealed");
-            if(box.classList.contains("revealed")) {
-                text.innerText = "Жооп: Мароккодогу Аль-Каравийин университети (859-ж.)";
-            } else {
-                text.innerText = "Жоопту көрүү үчүн басыңыз: «Дүйнөдөгү эң биринчи университет кайсы өлкөдө ачылган?»";
-            }
-        }
-    </script>
-</body>
-</html>
+<!doctype html><html lang="ky"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Оюндар — Акыл-Ордо</title><link rel="stylesheet" href="style.css"></head><body data-page="games"><div id="appHeader"></div><main class="container page-content">
+  <div class="page-title"><div><div class="eyebrow">ИНТЕЛЛЕКТУАЛДЫК МЕЛДЕШ</div><h1>Оюндар жана командалар</h1><p class="muted">Оюндардын расмий таблицасын көрүңүз. Каттоо жана уюштуруу админдин көзөмөлүндө.</p></div></div>
+  <section class="panel"><div class="panel-head"><div><h2>Жаңы оюн уюштуруу</h2><p class="muted">Оюндун атын, форматын жана катышуучу командаларды тандаңыз.</p></div><span class="panel-icon">🎮</span></div>
+  <form id="eventForm" class="admin-form"><div class="form-grid"><label>Оюндун аталышы<input id="eventTitle" required placeholder="Мисалы: Факультеттер аралык Акыл-Ордо"></label><label>Оюн форматы<select id="eventFormat"><option value="Классикалык">Классикалык</option><option value="Блиц">Блиц</option><option value="Эстафета">Эстафета</option><option value="Онлайн">Онлайн турнир</option><option value="Оффлайн">Оффлайн турнир</option></select></label><label>Башталуу убактысы<input id="eventDate" type="datetime-local"></label></div><label>Катышуучу командалар<select id="eventTeams" multiple size="4"></select><small class="muted">Бир нече команда тандоо үчүн Ctrl баскычын кармаңыз.</small></label><button class="btn btn-primary" type="submit">Оюнду түзүү</button></form><div id="eventList" class="event-list"></div></section>
+  <section class="panel" id="pendingApplicationsPanel"><div class="panel-head"><div><h2>Команда каттоо арыздары</h2><p class="muted">Онлайн командалар бекитилгенден кийин гана жалпы тизмеде көрүнөт.</p></div></div><div id="pendingApplications"></div></section>
+  <div class="two-col"><section class="panel" id="teamRegistrationPanel"><div class="panel-head"><div><h2>Команда каттоо</h2><p class="muted">Онлайн же оффлайн форматта так 6 оюнчуну каттаңыз</p></div><span class="panel-icon">👥</span></div><form id="teamForm" class="admin-form">
+    <label>Команданын аталышы<input id="teamName" required maxlength="50" placeholder="Мисалы: Ынтымак"></label>
+    <label>Формат<select id="teamMode"><option value="online">Онлайн команда</option><option value="offline">Оффлайн команда</option></select></label>
+    <label>6 оюнчунун аты-жөнү (ар бирин өзүнчө сапка жазыңыз)<textarea id="teamPlayers" rows="6" required placeholder="1. Оюнчу
+2. Оюнчу
+3. Оюнчу
+4. Оюнчу
+5. Оюнчу
+6. Оюнчу"></textarea><small class="muted">Демо версияда оюнчулар аты-жөнү менен катталат. Реалдуу онлайн версияда ар бир оюнчу өз аккаунту менен кошулуп, команда серверде бекитилет. Оффлайн команданы админ каттайт.</small></label>
+    <button class="btn btn-primary" type="submit">6 оюнчулуу команданы каттоо</button>
+  </form><div id="teamList" class="team-list"></div></section>
+  <section class="panel"><div class="panel-head"><div><h2>Упай кошуу</h2><p class="muted">Туура жооп үчүн упай бериңиз</p></div><span class="panel-icon">⭐</span></div><form id="scoreForm" class="stack-form"><label>Команда<select id="scoreTeam" required></select></label><label>Упай саны<input id="scoreValue" type="number" min="1" max="100" value="10" required></label><label>Түшүндүрмө<input id="scoreNote" placeholder="Мисалы: 3-суроо"></label><button class="btn btn-primary">Упай кошуу</button></form></section></div>
+  <section class="panel table-panel"><div class="panel-head"><div><h2>Командалар рейтинги</h2><p class="muted">Учурдагы жана аяктаган оюндардын упайлары кошулат</p></div><div class="table-actions"><button class="btn btn-outline btn-sm" id="exportCsv">Excel/CSV жүктөө</button><button class="btn btn-primary btn-sm" id="finishGame">Оюнду жыйынтыктоо</button></div></div><div class="table-wrap"><table class="data-table"><thead><tr><th>№</th><th>Команда</th><th>Упай</th><th>Аракет</th></tr></thead><tbody id="scoreTable"></tbody></table></div></section>
+  <section class="panel"><div class="panel-head"><div><h2>Оюндардын тарыхы</h2><p class="muted">Мурдагы оюндардын жыйынтыктары</p></div></div><div id="historyList" class="history-list"></div></section>
+</main><div id="appFooter"></div><div id="toast" class="toast"></div><script src="app.js"></script></body></html>
